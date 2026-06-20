@@ -22,11 +22,12 @@ body {
   position: absolute;
   top: 0;
 }
-.netflix {
-  width: 140px;
+.logo {
   z-index: 10;
   position: relative;
   margin-top: 10px;
+  display: flex;
+  align-items: center;
 }
 nav .buttons {
   z-index: 10;
@@ -78,19 +79,25 @@ nav {
   background-color: #313131;
 }
 .btn {
-  color: rgb(211, 211, 211);
-  background-color: #e50914;
+  color: #ffffff;
+  background-color: #ff0000;
   border: none;
   padding: 0.8rem 1.3rem;
   font-size: 0.9rem;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 5px;
   margin: 0px 10px;
   font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
   display: inline-block;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background-color: #ff0000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);
 }
 .arrow {
   margin: 0 0 0 3px;
@@ -189,14 +196,18 @@ nav {
   font-size: 22px;
   border-radius: 20px;
   height: 35vh;
-  background: linear-gradient(149deg, #14132b 0%, #1f1a3d 50%, #2b102a 100%);
+  background: linear-gradient(149deg, #1e1b4b 0%, #312e81 50%, #4c1d95 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
   display: inline-block;
   color: #ffffff;
+}
+.reason:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.2);
 }
 
 .reason-part {
