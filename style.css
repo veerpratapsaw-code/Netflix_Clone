@@ -29,6 +29,13 @@ body {
   display: flex;
   align-items: center;
 }
+.logo-text {
+  color: #ff0000;
+  font-weight: 900;
+  font-size: 2.2rem;
+  margin: 0;
+  letter-spacing: -1px;
+}
 nav .buttons {
   z-index: 10;
   position: relative;
@@ -57,6 +64,7 @@ nav {
   color: #ffffff;
   z-index: 10;
   padding: 20px;
+  width: 100%;
 }
 .hero h1 {
   font-size: 3rem;
@@ -173,9 +181,10 @@ nav {
 
 .Headlines {
   color: #ffffff;
-  margin: 20px 0px 0px 20px;
+  width: 80vw;
+  margin: 20px auto 0 auto;
   padding-top: 20px;
-  padding-left: 180px;
+  padding-left: 40px;
   font-weight: 500;
   font-size: 26px;
 }
@@ -354,14 +363,17 @@ details.faq-wrapper[open] summary .plus {
   .footer-links {
     grid-template-columns: repeat(2, 1fr);
   }
+  .Headlines {
+    width: 90vw;
+  }
 }
 
 @media (max-width: 768px) {
   nav {
     max-width: 90vw;
   }
-  .hero {
-    width: 90%;
+  .main {
+    background-size: cover;
   }
   .hero h1 {
     font-size: 2.2rem;
@@ -370,17 +382,23 @@ details.faq-wrapper[open] summary .plus {
     font-size: 1.1rem;
   }
   .email input {
-    width: 60%;
+    width: 70%;
   }
   .row, .reasons-row, .faq-wrapper, .footer-container {
     width: 90vw;
   }
   .Headlines {
-    padding-left: 5vw;
+    width: 90vw;
   }
 }
 
 @media (max-width: 480px) {
+  .main {
+    height: 100vh;
+  }
+  .main .opacity-box {
+    height: 100vh;
+  }
   .hero h1 {
     font-size: 1.8rem;
   }
@@ -392,6 +410,7 @@ details.faq-wrapper[open] summary .plus {
   }
   .email input {
     width: 90%;
+    min-width: unset;
   }
   .reasons-row {
     grid-template-columns: 1fr;
@@ -416,7 +435,7 @@ details.faq-wrapper[open] summary .plus {
   .btn {
     padding: 0.6rem 1rem;
   }
-  .logo h2 {
+  .logo-text {
     font-size: 1.8rem !important;
   }
 }
